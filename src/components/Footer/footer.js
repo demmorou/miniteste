@@ -1,10 +1,11 @@
 import React from 'react';
 
-export function Footer({ year }) {
+export default function Footer() {
 
   return (
     <footer style={{ position: 'absolute', bottom: 0, color: 'white', padding: '15px' }}>
-      Aqui temos um footer, { ano }
+      {/* getting the current year */}
+      Aqui temos um footer, { new Date().getFullYear() }
     </footer>
   );
 }

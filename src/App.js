@@ -1,23 +1,24 @@
 import React from 'react';
-import logo from './logo.jpeg';
 
+// importing all components
 import Content from './components/Content';
 import Footer from './components/Footer';
+import Header from './components/Header';
 
 import './App.css';
 
-function App() {
+export default function App() {
+  // Created component Header for apply the Principle S - Single responsibility principle
+
   return (
+    // Principle I - Interface Segregation Principle
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-
-      <Content nome="João" />
-
-      <Footer year="1999" />
+        {/* Header component */}
+        <Header />
+        {/* Content component */}
+        <Content name="Deusimar" />
+        {/* Footer component */}
+        <Footer />
     </div>
   );
 }
-
-export default App;
